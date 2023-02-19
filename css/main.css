@@ -1,0 +1,114 @@
+/* Core styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100&display=swap');
+:root{
+    --Lato: 'Lato', sans-serif;
+    --grey: #999;
+    --brown: #99CC99;
+    --exGrey: #444444;
+    --darkGrey: #333;
+}
+body{
+    line-height: 1.4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Lato);
+}
+.left-content{
+    background-color: var(--darkGrey);
+   
+}
+.right-content__img1{
+    background-image: url("../image/vertex-bg-01.jpg");
+    background-position:right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* Start of header and Navbar section styles*/
+.header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+.navigation{
+    background-color: var(--exGrey);
+    padding: 2rem 3rem;
+    width: 100%;
+}
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar__link{
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+    font-weight: 400;
+    transition: all .4s ease;
+}
+.active__link{
+    color: var(--brown);
+}
+.navbar__link:hover{
+    color: var(--brown);
+}
+/* End of header and Navbar section styles*/
+/* Start of introduction section styles*/
+.introduction{
+    padding: 2rem; 
+}
+.intro-content{
+    padding: 2rem;
+}
+.intro-item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    padding: 1.2rem 0 3rem 0;
+}
+.intro-item img{
+    width: 90%;
+}
+.intro-title{
+    color: var(--brown);
+    padding: 1.2rem 0;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+.intro-text{
+    color: var(--grey);
+    font-weight: 600;
+    padding: 0.5rem 0;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.intro-link{
+    color: #9999CC;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    display: block;
+    text-decoration: none;
+    text-align: right;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.821);
+}
+.intro-btn a{
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.8rem 2.5rem;
+    border: 1px solid var(--grey);
+    transition: all .4s ease;
+}
+.intro-btn a:hover{
+    color: var(--brown);
+    border-color: var(--brown);
+}
+.intro-btn{
+    display: block;
+    text-align: right;
+}
+/* End of introduction section styles*/
