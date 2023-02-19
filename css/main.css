@@ -1,7 +1,6 @@
 /* Core styles */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100&display=swap');
-:root{
-    --Lato: 'Lato', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap');:root{
+    --Lato: 'Roboto Condensed', sans-serif;;
     --grey: #999;
     --brown: #99CC99;
     --exGrey: #444444;
@@ -26,11 +25,16 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.right-content__img2{
+    background-image: url("../image/vertex-bg-02.jpg");
+    background-position:right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 /* Start of header and Navbar section styles*/
 .header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
 }
 .navigation{
     background-color: var(--exGrey);
@@ -46,9 +50,10 @@ body{
     color: var(--grey);
     text-decoration: none;
     font-size: 1.4rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     font-weight: 400;
     transition: all .4s ease;
+    letter-spacing: 1px;
 }
 .active__link{
     color: var(--brown);
@@ -112,3 +117,66 @@ body{
     text-align: right;
 }
 /* End of introduction section styles*/
+/* Start of service section styles */
+.services{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.service-content{
+    padding: 3rem;
+    background-color: var(--darkGrey);
+}
+.service-first__text{
+    padding: 1.5rem;
+}
+.service-second__text{
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.service-title{
+    color: var(--brown);
+    font-weight: 700;
+    padding: 1.2rem 0;
+    font-size: 2rem;
+}
+.service-text{
+    color: var(--grey);
+    padding: 1.2rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: var(--Lato);
+}
+.service-btn a{
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.8rem 2.5rem;
+    margin: 1.5rem;
+    border: 1px solid var(--grey);
+    transition: all .4s ease;
+}
+.service-btn a:hover{
+    color: var(--brown);
+    border-color: var(--brown);
+}
+.service-btn{
+    display: block;
+    text-align: right;
+}
+.service-item{
+    padding: 0.5rem 0.6rem;
+}
+.border-bottom_second{
+    border-bottom: 1px solid rgba(151, 151, 151, 0.821);
+}
+.service-item span i{
+    color: var(--grey);
+    font-size: 3rem;
+    text-align: center;
+    display: block;
+    text-align: center;
+}
+/* End of service section styles */
