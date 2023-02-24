@@ -11,6 +11,7 @@ html{
 }
 body{
     line-height: 1.4;
+    position: relative;
 }
 *{
     margin: 0;
@@ -64,10 +65,13 @@ body{
 }
 /* Start of Javascript styles */
 .show{
-    display: block;
+    display: grid !important; 
 }
 .hide{
     display: none !important;
+}
+.activeNavbar{
+    transform: translateX(0) !important;
 }
 /* End of Javascript styles */
 /* Start of header and Navbar section styles*/
@@ -103,6 +107,17 @@ body{
 }
 .navbar__link:hover{
     color: var(--brown);
+}
+.burger{
+    display: none;
+}
+.burger i{
+    color: var(--grey);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.burger i:hover{
+    color: #fff;
 }
 /* End of header and Navbar section styles*/
 /* Start of introduction section styles*/
@@ -210,7 +225,7 @@ body{
 /* End of service section styles */
 /* Start of gallery section styles */
 .gallery{
-    padding: 3rem;
+    padding: 2rem;
     background-color: var(--darkGrey);
 }
 .gallery-title{
@@ -221,11 +236,16 @@ body{
     text-align: right;
   
 }
+.gallery-main-content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
 .gallery-content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    gap: 2rem;
+    gap: 1.2rem;
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -238,6 +258,7 @@ body{
 .gallery-item{
     overflow: hidden;
     height: auto;
+    padding-bottom: 1.2rem;
     transition: all .2s linear;
     background-color:  #9c9;
 }
@@ -277,7 +298,7 @@ body{
 .gallery-text{
     padding: 1.5rem;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: all 0.5s ease;
 }
 .gallery-links{
@@ -297,6 +318,18 @@ body{
 }
 .gallery__link:hover{
     background-color: var(--exGrey);
+}
+.active-content{
+    animation-name: activeContent;
+    animation-duration: 1s;
+}
+@keyframes activeContent {
+    0%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 /* End of gallery section styles */
 /* Start of about section styles */
@@ -332,7 +365,9 @@ body{
     grid-template-columns: repeat(2, 1fr);
 }
 .contact-content{ 
-    padding: 4rem 3rem;
+    padding: 5rem 3rem;
+    width: 85%;
+    margin: 0 auto;
     position: relative;
 }
 .contact-title{
@@ -363,7 +398,105 @@ body{
 .foo-text{
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    left: 3rem;
     color: var(--grey);
 }
+frame{
+    width: 400px;
+}
 /* End of contact section styles */
+/* Start of Section card styles */
+.section-card{
+    padding: 3rem 5rem;
+    background-color: var(--darkGrey);
+    color: var(--grey);
+    border-radius: 1rem;
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+}
+.section-img i{
+    color: var(--grey);
+    font-size: 2rem;
+}
+/* End of Section card styles */
+/* Start of Media query for laptop and tablot sytles */
+@media screen and (max-width: 1000px) {
+    .header,
+    .about,
+    .services,
+    .gallery,
+    .contact{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .intro-content,
+    .about-content,
+    .service-content,
+    .gallery-content,
+    .contact-content{
+        padding: 6rem 2rem;
+        width: 100%;
+    }
+    .navigation{
+        width: 100%;
+        
+    }
+    .navbar__link{
+        font-size: 1.5rem;
+    }
+}
+/* End of Media query sytles */
+/* Start of Media query for phone styles */
+@media screen and (max-width: 800px){
+    .intro-content,
+    .about-content,
+    .service-content,
+    .gallery-content,
+    .contact-content{
+        padding: 6rem 1rem;
+        width: 100%;
+    }
+    .navigation{
+        display: inline-block;
+        width: max-content;
+        padding: 1rem;
+        z-index: 999;
+    }
+    .navbar-nav{
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        padding: 1rem;
+        width: max-content;
+        background-color: var(--exGrey);
+        display: block;
+        transform: translateY(-200%);
+        transition: transform .5s ease-in;
+    }
+    .navbar__link{
+        display: block;
+        padding: 0.5rem 0;
+    }
+    .burger{
+        display: block;
+    }
+    .intro-item{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-item{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .gallery-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .service-second__text{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    frame{
+        width: 100px;
+    }
+}
+/* End of Media query for phone styles */
