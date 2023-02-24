@@ -18,9 +18,24 @@ body{
     box-sizing: border-box;
     font-family: var(--Lato);
 }
+.section-btn a{
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.8rem 2.5rem;
+    border: 1px solid var(--grey);
+    transition: all .4s ease;
+}
+.section-btn a:hover{
+    color: var(--brown);
+    border-color: var(--brown);
+}
+.section-btn{
+    display: block;
+    text-align: right;
+}
 .left-content{
     background-color: var(--darkGrey);
-   
 }
 .right-content__img1{
     background-image: url("../image/vertex-bg-01.jpg");
@@ -34,9 +49,22 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.right-content_img3{
+    background-image: url("../image/vertex-bg-03.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.right-content_img4{
+    background-image: url("../image/vertex-bg-04.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 3rem;
+}
 /* Start of Javascript styles */
 .show{
-    display: block !important;
+    display: block;
 }
 .hide{
     display: none !important;
@@ -115,22 +143,7 @@ body{
     text-align: right;
     border-bottom: 1px solid rgba(151, 151, 151, 0.821);
 }
-.intro-btn a{
-    color: var(--grey);
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 0.8rem 2.5rem;
-    border: 1px solid var(--grey);
-    transition: all .4s ease;
-}
-.intro-btn a:hover{
-    color: var(--brown);
-    border-color: var(--brown);
-}
-.intro-btn{
-    display: block;
-    text-align: right;
-}
+
 /* End of introduction section styles*/
 /* Start of service section styles */
 .services{
@@ -197,7 +210,7 @@ body{
 /* End of service section styles */
 /* Start of gallery section styles */
 .gallery{
-    padding: 4rem;
+    padding: 3rem;
     background-color: var(--darkGrey);
 }
 .gallery-title{
@@ -206,6 +219,7 @@ body{
     padding: 2rem 0;
     font-size: 2rem;
     text-align: right;
+  
 }
 .gallery-content{
     display: grid;
@@ -225,7 +239,7 @@ body{
     overflow: hidden;
     height: auto;
     transition: all .2s linear;
-    background-color: var(--brown);
+    background-color:  #9c9;
 }
 .gallery-item:hover{
     transform: translateY(-22%);
@@ -261,7 +275,6 @@ body{
     left: 10px;
 }
 .gallery-text{
-    background-color: var(--brown);
     padding: 1.5rem;
     color: #fff;
     font-size: 1.2rem;
@@ -286,3 +299,71 @@ body{
     background-color: var(--exGrey);
 }
 /* End of gallery section styles */
+/* Start of about section styles */
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.about-content{
+    padding: 4rem 3rem;
+    width: 80%;
+    margin: 0 auto;
+}
+.about-title{
+    color: var(--brown);
+    padding: 1.2rem 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.about-text{
+    color: var(--grey);
+    font-size: 1.2rem;
+    line-height: 1.2;
+    padding: 2rem 0;
+    margin: 1rem 0;
+}
+.about-text__bordered{
+    border-bottom: 1px solid var(--grey);
+}
+/* End of about section styles */
+/* Start of contact section styles */
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.contact-content{ 
+    padding: 4rem 3rem;
+    position: relative;
+}
+.contact-title{
+    color: var(--brown);
+    padding: 1.2rem 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.contact-text{
+    color: var(--grey);
+    font-size: 1.2rem;
+    line-height: 1.2;
+    padding: 2rem 0;
+    margin: 1rem 0;
+}
+.form input{
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    margin: 2rem 0;
+    background-color: var(--darkGrey);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--grey);
+    font-size: 1.2rem;
+    color: var(--grey);
+}
+.foo-text{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: var(--grey);
+}
+/* End of contact section styles */
